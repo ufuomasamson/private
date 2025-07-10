@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://odtzljgyglfmdlvsabsg.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9kdHpsamd5Z2xmbWRsdnNhYnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIxNTYyNTcsImV4cCI6MjA2NzczMjI1N30.QxE6FcN6sVXLlm9pe-pE6QH0BuRu7ES5JmpHPcoVvhk",
+    "NEXT_PUBLIC_BASE_URL": "https://manoair.vercel.app"
+  }
+} 

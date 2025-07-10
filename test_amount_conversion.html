@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amount Conversion Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-case { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        .result { margin-top: 10px; padding: 10px; background-color: #f0f0f0; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Amount Conversion Test</h1>
+    
+    <div class="test-case">
+        <h3>Test Case 1: €5,643</h3>
+        <p>Original amount: €5,643</p>
+        <p>To Flutterwave: €5,643.00 (base currency)</p>
+        <p>From Flutterwave: €5,643.00 (base currency)</p>
+        <div class="result">
+            <strong>Result:</strong> Should be €5,643.00
+        </div>
+    </div>
+
+    <div class="test-case">
+        <h3>Test Case 2: €500</h3>
+        <p>Original amount: €500</p>
+        <p>To Flutterwave: €500.00 (base currency)</p>
+        <p>From Flutterwave: €500.00 (base currency)</p>
+        <div class="result">
+            <strong>Result:</strong> Should be €500.00
+        </div>
+    </div>
+
+    <div class="test-case">
+        <h3>Test Case 3: €1,250.50</h3>
+        <p>Original amount: €1,250.50</p>
+        <p>To Flutterwave: €1,250.50 (base currency)</p>
+        <p>From Flutterwave: €1,250.50 (base currency)</p>
+        <div class="result">
+            <strong>Result:</strong> Should be €1,250.50
+        </div>
+    </div>
+
+    <script>
+        // Test the conversion logic
+        function testConversion(originalAmount, currency = 'EUR') {
+            // Flutterwave expects amounts in base currency
+            let toFlutterwave = Math.round(originalAmount * 100) / 100;
+            let fromFlutterwave = toFlutterwave;
+            
+            return {
+                original: originalAmount,
+                toFlutterwave: toFlutterwave,
+                fromFlutterwave: fromFlutterwave,
+                matches: originalAmount === fromFlutterwave
+            };
+        }
+
+        // Test cases
+        const testCases = [
+            { amount: 5643, currency: 'EUR' },
+            { amount: 500, currency: 'EUR' },
+            { amount: 1250.50, currency: 'EUR' }
+        ];
+
+        console.log('Testing amount conversions:');
+        testCases.forEach(test => {
+            const result = testConversion(test.amount, test.currency);
+            console.log(`${test.amount} ${test.currency}:`, result);
+        });
+    </script>
+</body>
+</html> 
