@@ -284,7 +284,7 @@ export default function HomePage() {
         <div className="relative grid grid-cols-1 md:grid-cols-2">
           <div className="p-8 md:p-12 text-white flex flex-col justify-center">
             <h2 className="text-4xl font-bold mb-6">Your Great Destination</h2>
-            <p className="text-lg mb-8">Get rewarded for your travels with Mazol Inc  unlock instant savings of 10% or more with a free +447587623610 account</p>
+            <p className="text-lg mb-8">Get rewarded for your travels with Private Air — unlock instant savings of 10% or more with a free +447587623610 account</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center gap-4">
                 <svg className="w-10 h-10 text-[#d18a27]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.121-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.121-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M12 14a4 4 0 100-8 4 4 0 000 8z"></path></svg>
