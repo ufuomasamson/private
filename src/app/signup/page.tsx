@@ -52,26 +52,7 @@ export default function SignupPage() {
       }
 
       if (data.user) {
-        // Insert user record with role
-        const { error: insertError } = await supabase
-          .from("users")
-          .insert([
-            {
-              id: data.user.id,
-              email: data.user.email,
-              full_name: fullName,
-              role: "user", // Default role for new signups
-            },
-          ]);
-
-        if (insertError) {
-          setError("Error creating user profile");
-          setLoading(false);
-          return;
-        }
-
         setSuccess("Account created successfully! Please check your email to verify your account.");
-        
         // Redirect to login after a delay
         setTimeout(() => {
           router.push("/login");
